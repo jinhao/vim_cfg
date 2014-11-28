@@ -1,6 +1,6 @@
 #What
-> my vim config
-> 使用bundle安装vim插件
+> my vim config    
+> 使用bundle安装vim插件    
 > 逐步更新中...
 
 #HOW
