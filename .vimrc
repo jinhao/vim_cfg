@@ -67,10 +67,20 @@ set incsearch
 set laststatus=2
 
 map<F3> :silent! Tlist<CR>
+map<F2> :NERDTree <cr>
 "Taglist是最后一个窗口时自动退出
 let Tlist_Exit_OnlyWindow=1
+let Tlist_Show_One_File=1                    " 只显示当前文件的tags"
+let Tlist_Use_Right_Window=1
 "非当前文件，函数列表折叠
 let Tlist_File_Fold_Auto_Close=1
+
+let g:vimrc_author='haojin' 
+let g:vimrc_email='jinhao2011@gmail.com' 
+"let g:vimrc_homepage='http://www.vimer.cn' 
+let g:vimrc_version='2.0.0'
+
+nmap <F4> :AuthorInfoDetect<cr> 
 
 set nocp
 filetype plugin on
