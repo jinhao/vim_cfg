@@ -23,6 +23,7 @@ Bundle 'vcscommand.vim'
 Bundle 'ShowPairs'
 Bundle 'SudoEdit.vim'
 Bundle 'EasyGrep'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 " Bundle 'VOoM'
 " Bundle 'VimIM'
 " "..................................
@@ -68,6 +69,7 @@ set laststatus=2
 
 map<F3> :silent! Tlist<CR>
 map<F2> :NERDTree <cr>
+let g:ackprg = 'ag --nogroup --nocolor --column'
 "Taglist是最后一个窗口时自动退出
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Show_One_File=1                    " 只显示当前文件的tags"
@@ -77,7 +79,7 @@ let Tlist_File_Fold_Auto_Close=1
 
 let g:vimrc_author='haojin' 
 let g:vimrc_email='jinhao2011@gmail.com' 
-"let g:vimrc_homepage='http://www.vimer.cn' 
+let g:vimrc_homepage='http://i4box.com' 
 let g:vimrc_version='2.0.0'
 
 nmap <F4> :AuthorInfoDetect<cr> 
@@ -105,3 +107,4 @@ set completeopt=menuone,menu,longest,preview
 set fencs=utf-8,GB18030,ucs-bom,default,latin1,ucs-bom
 set foldmethod=manual
 
+set tags=/Users/i4box/Work/XPush/Source/tags
