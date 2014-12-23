@@ -108,3 +108,10 @@ set fencs=utf-8,GB18030,ucs-bom,default,latin1,ucs-bom
 set foldmethod=manual
 
 set tags=/Users/i4box/Work/XPush/Source/tags
+
+"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols='unicode'
+set fillchars+=stl:\ ,stlnc:\
+set encoding=utf-8
+set laststatus=2
+set t_Co=256
