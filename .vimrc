@@ -4,6 +4,7 @@ call vundle#rc()
 "my Bundle here:
 ""
 " original repos on github
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
 Bundle 'sukima/xmledit'
 Bundle 'sjl/gundo.vim'
@@ -23,7 +24,10 @@ Bundle 'vcscommand.vim'
 Bundle 'ShowPairs'
 Bundle 'SudoEdit.vim'
 Bundle 'EasyGrep'
+Bundle 'tagbar'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
+
+Plugin 'fatih/vim-go'
 " Bundle 'VOoM'
 " Bundle 'VimIM'
 " "..................................
@@ -87,6 +91,7 @@ nmap <F4> :AuthorInfoDetect<cr>
 set nocp
 filetype plugin on
 
+set tags=~/Work/XPush/Source/
 set tags+=~/.vim/tags/cpp
 " build tags of your own project with Ctrl-F12
 map <C-F12> :!ctags -R --sort=yes --c++-kinds=+pl --fields=+iaS --extra=+q .<CR>
@@ -113,5 +118,47 @@ set tags=/Users/i4box/Work/XPush/Source/tags
 let g:Powerline_symbols='unicode'
 set fillchars+=stl:\ ,stlnc:\
 set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set termencoding=utf-8
+
 set laststatus=2
 set t_Co=256
+set foldlevel=99
+set fdm=indent
+
+set number
+syntax enable
+set background=dark
+let g:solarized_termcolors = 256  " New line!!
+colorscheme solarized
+
+
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
+nmap <F8> :TagbarToggle<CR>
