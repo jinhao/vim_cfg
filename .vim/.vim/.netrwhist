@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/i4box/.vim'
-let g:netrw_dirhist_2='/Users/i4box/OpenSource/blog/octopress/source/_posts'
-let g:netrw_dirhist_3='/Users/i4box/OpenSource/myblog/octopress/_deploy/blog'
